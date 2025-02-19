@@ -1,0 +1,159 @@
+body{
+    height: 100vh;
+    background: rgb(206,205,222);
+    background: linear-gradient(103deg, rgba(206,205,222,1) 0%, rgba(193,193,226,1) 21%, rgba(177,223,231,1) 43%, rgba(173,227,216,1) 71%, rgba(165,203,250,1) 100%);
+    background-attachment: fixed !important;
+}
+img{
+    object-fit: cover;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(40px);
+    animation: navbarcoming 1s ease;
+    z-index: 100;
+}
+
+@keyframes navbarcoming {
+    0%{
+        transform: translateY(-80px);
+    }
+}
+.container{
+    height: 100vh;
+}
+.navbar-nav li{
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: bold;
+}
+.navbar-nav li span{
+    width: 0%;
+    height: 4px;
+    bottom: 0;
+    background: #000;
+    position: absolute;
+    z-index: 1;
+    transition: .6s ease-in-out;
+}
+.navbar-nav li:hover span{
+    width: 100%;
+}
+.navbar-nav li:active span,
+.navbar-nav li:focus-within span{
+    width: 100%;
+}
+.navbar-nav li a{
+    position: relative;
+    z-index: 2;
+}
+.navbar-toggler{
+    outline-color: none !important;
+}
+.row{
+    height: 100%;
+}
+.gap200{
+    height: 200px;
+    width: 100%;
+} 
+.button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: rgb(0 107 179);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+    width: 100%;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+  
+  .button:hover .icon {
+    transform: translate(4px);
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    animation: shine 1.5s ease-out infinite;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+  .itsme{
+    box-shadow: 10px 12px 10px -5px rgb(82, 81, 81);
+    animation: imagecoming 2s ease;
+    background: transparent;
+    backdrop-filter: blur(30px);
+  }
+  @keyframes imagecoming {
+    0%{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+  }
+  .namelabal{
+    font-size: 3.5rem !important;
+    text-shadow: 3px 3px 10px #00000070;
+  }
+  .home-labals{
+    animation: fadecoming 2s ease;
+  }
+  @keyframes fadecoming {
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+  }
